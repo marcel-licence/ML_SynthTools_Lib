@@ -1,0 +1,28 @@
+ML SynthTools Libraries License
+
+Version 1.0
+
+Effective Date: 13.10.2024
+
+1. License Grant
+
+This license permits you to use the accompanying precompiled library (.a file) and the associated header files (.h files) provided that:
+
+1.1 You may use the library and header files for personal, educational, or research purposes only.
+1.2 Commercial use of the library, whether directly or indirectly, is prohibited without explicit written permission from the author.
+
+2. No Source Code
+
+This distribution does not include the source code of the library. You are not granted any rights to the source code, and you may not attempt to reverse-engineer, decompile, or disassemble the library.
+
+3. Redistribution
+
+You may redistribute the precompiled library and header files unchanged for non-commercial purposes, provided that this license accompanies any such distribution. You may not distribute modified versions of the library or any derivative works without express permission.
+
+4. Commercial License
+
+If you wish to use this library for commercial purposes, you must obtain a separate commercial license. Please contact [Your Contact Information] to inquire about commercial licensing terms.
+
+5. Warranty Disclaimer and Liability
+
+This library is provided "as-is," without any warranty of any kind, express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, or non-infringement. In no event shall the author be liable for any damages arising from the use of this library.
