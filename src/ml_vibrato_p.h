@@ -20,28 +20,25 @@
  */
 
 /**
- * @file ml_delay_q.h
+ * @file ml_vibrato.h
  * @author Marcel Licence
- * @date 06.01.2022
+ * @date 01.09.2023
  *
- * @brief This file contains the declarations of functions of a simple delay effect
+ * @brief   Vibrato declarations
+ *
+ * @see little demo: https://youtu.be/hqK_U22Jha8
  */
 
 
-#ifndef SRC_ML_DELAY_Q_H_
-#define SRC_ML_DELAY_Q_H_
+#ifndef SRC_ML_VIBRATO_P_H_
+#define SRC_ML_VIBRATO_P_H_
 
 
-#include <stdint.h>
+#include <ml_vibrato.h>
 
 
-void DelayQ_Init(int16_t *buffer, uint32_t len);
-void DelayQ_Init2(int16_t *left, int16_t *right, uint32_t len);
-void DelayQ_Process_Buff(const int16_t *in_l, const int16_t *in_r, int16_t *out_l, int16_t *out_r, int buffLen);
-void DelayQ_SetFeedback(uint8_t unused __attribute__((unused)), uint8_t value);
-void DelayQ_SetOutputLevel(uint8_t unused __attribute__((unused)), uint8_t value);
-void DelayQ_SetLength(uint8_t unused __attribute__((unused)), uint32_t value);
+void ML_Vibrato_ProcessHQ(const float *in, const float *mod_in, float *out, uint32_t count, float mod_multiplier, int32_t &inCnt, float *buffer, float depth, float depthInv);
 
 
-#endif /* SRC_ML_DELAY_Q_H_ */
+#endif /* SRC_ML_VIBRATO_P_H_ */
 
