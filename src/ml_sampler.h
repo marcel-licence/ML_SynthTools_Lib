@@ -96,6 +96,9 @@ void Sampler_IncSample(void);
 
 void Sampler_Process(Q1_14 *left, Q1_14 *right, uint32_t count);
 
+bool Sampler_NewSampleStatic(const unsigned char *data, uint32_t size);
+bool Sampler_NewSampleStatic(const unsigned char *data, uint32_t size, uint8_t note);
+
 
 #endif /* SRC_ML_SAMPLER_H_ */
 
