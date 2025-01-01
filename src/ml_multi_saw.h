@@ -2,7 +2,7 @@
  * ML SynthTools Lib - A modular synthesizer library including organ, electric piano,
  * oscillators, and sound synthesis tools.
  * 
- * Copyright (C) 2024 Marcel Licence
+ * Copyright (C) 2025 Marcel Licence
  * 
  * This file is part of the ML SynthTools Lib library and is licensed under the ML SynthTools Lib License.
  * 
