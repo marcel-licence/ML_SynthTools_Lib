@@ -20,7 +20,7 @@
   "build": {
 
     "flags": [
-        "-lML_SynthTools_Lib"
+        "-lML_SynthTools"
     ]
   },
 
