@@ -54,6 +54,7 @@ void Sampler_NoteOn(uint8_t ch, uint8_t note, uint8_t vel);
 void Sampler_NoteOff(uint8_t ch, uint8_t note, uint8_t vel __attribute__((unused)));
 void Sampler_NoteOff(uint8_t ch, uint8_t note);
 void Sampler_AllNotesOff(void);
+void Sampler_SetNoteVel(uint8_t ch, uint8_t note, uint8_t vel);
 void Sampler_PitchBend(uint8_t ch, uint16_t bend);
 
 void Sampler_ChangeParameter(uint8_t parameter, float value);
