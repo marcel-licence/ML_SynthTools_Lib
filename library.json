@@ -16,7 +16,9 @@
         "maintainer": true
     }
   ],
-  "includePath": "lib/ML_SynthTools_Lib/src",
+  "includePath": [
+      "${workspaceFolder}/lib/ML_SynthTools_Lib/src"
+  ],
   "build": {
 
     "flags": [
