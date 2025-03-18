@@ -59,6 +59,7 @@ void Sampler_AllNotesOff(void);
 void Sampler_SetNoteVel(uint8_t ch, uint8_t note, uint8_t vel);
 void Sampler_PitchBend(uint8_t ch, uint16_t bend);
 void Sampler_SetChannelVolume(uint8_t ch, uint8_t data1, uint8_t data2);
+void Sampler_SetBendRange(float range_semi);
 
 void Sampler_ChangeParameter(uint8_t parameter, float value);
 void Sampler_ChangeParameter(uint8_t parameter, uint8_t value);
