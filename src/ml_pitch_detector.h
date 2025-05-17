@@ -20,30 +20,27 @@
  */
 
 /**
- * @file    ml_slicer.h
- * @author  Marcel Licence
- * @date    24.03.2023
+ * @file ml_pitch_detector
+ * @brief Header file for the pitch detector module
  *
- * @brief   A simple slicer effect (work still on progress)
+ * This module is used for pitch detection with 24 bins per octave
  *
- * @see     https://youtu.be/kcf597op8o4
+ * @date 17.10.2024
+ * @author Marcel Licence
  */
 
-
-#ifndef ML_SLICER_H_
-#define ML_SLICER_H_
-
-
-#include <ml_types.h>
+#ifndef SRC_ML_PITCH_DETECTOR_H_
+#define SRC_ML_PITCH_DETECTOR_H_
 
 
-void Slicer_Process(Q1_14 *ch_l, Q1_14 *ch_r, uint32_t sample_count);
-uint32_t Slicer_GetLastMultiplier(void);
-void Slicer_SetSpeed(uint8_t unused __attribute__((unused)), uint8_t value);
-void Slicer_SetDepth(uint8_t unused __attribute__((unused)), uint8_t value);
-void Slicer_SetType(uint8_t unused __attribute__((unused)), uint8_t value);
-void Slicer_SetAttack(uint8_t unused __attribute__((unused)), uint8_t value);
-void Slicer_SetDecay(uint8_t unused __attribute__((unused)), uint8_t value);
+#include <stdint.h>
 
 
-#endif /* ML_SLICER_H_ */
+void Notedetector_Setup(float sample_rate);
+void NoteDetector_PushSamples(float *in, uint32_t count);
+void NoteDetector_GetConstants24(float *out);
+uint8_t NoteDetector_GetIdx(void);
+bool NoteDetector_Process(void);
+
+
+#endif /* SRC_ML_PITCH_DETECTOR_H_ */
