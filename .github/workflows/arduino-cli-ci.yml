@@ -18,7 +18,7 @@ jobs:
       matrix:
         sketch:
           - name: ml_synth_organ_example
-            defines: "-DUSE_ML_SYNTH_PRO=1"
+            defines: ""
 
         board:
 
@@ -26,7 +26,7 @@ jobs:
           - name: "ESP32 Dev Module"
             fname: "esp32"
             fqbn: "esp32:esp32:esp32"
-            core: "esp32:esp32@3.2.1"
+            core: "esp32:esp32@3.3.7"
             urls: "https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json"
             family: "ESP32"
             extra_libs: ""
@@ -35,7 +35,7 @@ jobs:
           - name: "ESP32S2 Dev Module"
             fname: "esp32s2"
             fqbn: "esp32:esp32:esp32s2"
-            core: "esp32:esp32@3.2.1"
+            core: "esp32:esp32@3.3.7"
             urls: "https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json"
             family: "ESP32"
             extra_libs: ""
@@ -44,7 +44,7 @@ jobs:
           - name: "LOLIN S2 Mini"
             fname: "lolin_s2_mini"
             fqbn: "esp32:esp32:lolin_s2_mini"
-            core: "esp32:esp32@3.2.1"
+            core: "esp32:esp32@3.3.7"
             urls: "https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json"
             family: "ESP32"
             extra_libs: ""
@@ -53,7 +53,7 @@ jobs:
           - name: "ESP32S3 Dev Module"
             fname: "esp32s3"
             fqbn: "esp32:esp32:esp32s3"
-            core: "esp32:esp32@3.2.1"
+            core: "esp32:esp32@3.3.7"
             urls: "https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json"
             family: "ESP32"
             extra_libs: ""
@@ -62,7 +62,7 @@ jobs:
           - name: "ESP32C3 Dev Module"
             fname: "esp32c3"
             fqbn: "esp32:esp32:esp32c3"
-            core: "esp32:esp32@3.2.1"
+            core: "esp32:esp32@3.3.7"
             urls: "https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json"
             family: "ESP32"
             extra_libs: ""
@@ -71,7 +71,7 @@ jobs:
           - name: "XIAO_ESP32C3"
             fname: "xiao_esp32c3"
             fqbn: "esp32:esp32:XIAO_ESP32C3"
-            core: "esp32:esp32@3.2.1"
+            core: "esp32:esp32@3.3.7"
             urls: "https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json"
             extra_libs: ""
             options: ""
@@ -160,18 +160,10 @@ jobs:
         exclude:
           - board:
               name: "XIAO_ESP32C3"
-            sketch: 
-              name: ml_audio_test
 
           - board:
               name: "ESP32C3 Dev Module"
-            sketch: 
-              name: ml_audio_test
 
-          - board:
-              name: "Generic STM32F4 Series - BlackPill F411CE"
-            sketch: 
-              name: ml_audio_test
 
     steps:
     - uses: actions/checkout@v4
@@ -246,8 +238,8 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         files: |
-          build/**/*.bin
-          build/**/*.uf2
-          build/**/*.hex
+          build/${{ matrix.board.fname }}-${{ matrix.sketch.name }}/**/*.bin
+          build/${{ matrix.board.fname }}-${{ matrix.sketch.name }}/**/*.uf2
+          build/${{ matrix.board.fname }}-${{ matrix.sketch.name }}/**/*.hex
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
