@@ -212,7 +212,6 @@ jobs:
         arduino-cli compile \
           --fqbn "$FULL_FQBN" \
           --output-dir build/${{ matrix.board.fname }}-${{ matrix.sketch.name }} \
-          --build-property build.extra_flags="${{ matrix.defines }}" \
           examples/${{ matrix.sketch.name }}
 
     - name: Generate UF2 (SAMD21)
