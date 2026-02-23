@@ -211,6 +211,7 @@ jobs:
 
         arduino-cli compile \
           --fqbn "$FULL_FQBN" \
+          --build-property compiler.libraries.ldflags="" \
           --output-dir build/${{ matrix.board.fname }}-${{ matrix.sketch.name }} \
           examples/${{ matrix.sketch.name }}
 
