@@ -2,7 +2,7 @@
  * ML SynthTools Lib - A modular synthesizer library including organ, electric piano,
  * oscillators, and sound synthesis tools.
  *
- * Copyright (C) 2025 Marcel Licence
+ * Copyright (C) 2026 Marcel Licence
  *
  * This file is part of the ML SynthTools Lib library and is licensed under the ML SynthTools Lib License.
  *
@@ -55,19 +55,11 @@
 
 
 void DelayQ_Init(int16_t *buffer, uint32_t len);
-#ifdef ESP32
-void DelayQ_Init2(short *left, short *right, unsigned int len);
-#else
 void DelayQ_Init2(int16_t *left, int16_t *right, uint32_t len);
-#endif
 void DelayQ_Process_Buff(const int16_t *in_l, const int16_t *in_r, int16_t *out_l, int16_t *out_r, int buffLen);
 void DelayQ_SetFeedback(uint8_t unused __attribute__((unused)), uint8_t value);
 void DelayQ_SetOutputLevel(uint8_t unused __attribute__((unused)), uint8_t value);
-#ifdef ESP32
-void DelayQ_SetLength(unsigned char unused __attribute__((unused)), unsigned int value);
-#else
 void DelayQ_SetLength(uint8_t unused __attribute__((unused)), uint32_t value);
-#endif
 
 
 #endif /* SRC_ML_DELAY_Q_H_ */

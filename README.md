@@ -2,10 +2,10 @@
 ML SynthTools Libraries
 
 Following board versions are supported:
-- ESP32 v2.0.17 (v3 is coming in future)
-- RP2040 v4.4.0
+- ESP32 v3.3.1 (and others)
+- RP2040 v5.5.1 (and others)
 - ESP8266 v3.1.2
-- Teensy for Arduino 2.0.4
-- SAMD (?)
+- Teensy 1.60.0 (for Arduino 2.0.4)
+- SAMD 1.8.5
 
 The installation manual can be found here: <a href="extras/install.md">Installation manual</a>
