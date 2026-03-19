@@ -199,6 +199,11 @@ jobs:
       run: |
         mkdir -p ~/Arduino/libraries
 
+        echo "REF=$REF"
+        echo "GITHUB_REF=$GITHUB_REF"
+        echo "GITHUB_REF_NAME=$GITHUB_REF_NAME"
+        echo "GITHUB_HEAD_REF=$GITHUB_HEAD_REF"
+
         REF="${GITHUB_REF_NAME}"
 
         git clone --depth 1 --branch "$REF" https://github.com/marcel-licence/ML_SynthTools.git \
