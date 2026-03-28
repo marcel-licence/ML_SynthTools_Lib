@@ -32,7 +32,7 @@
  */
 
 
-#if (defined ARDUINO_RASPBERRY_PI_PICO) || (defined ARDUINO_GENERIC_RP2040)
+#if (defined ARDUINO_ARCH_RP2040) && (!defined __ARM_FEATURE_DSP)
 #define rp2350_i2s_init(...)    rp2040_i2s_init(__VA_ARGS__)
 #define rp2350_i2s_write_stereo_samples_buff(...)   rp2040_i2s_write_stereo_samples_buff(__VA_ARGS__)
 #endif
